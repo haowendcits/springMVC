@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework:spring-webmvc:3.version">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.version/spring-webmvc-3.version.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.version/spring-webmvc-3.version-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.version/spring-webmvc-3.version-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
