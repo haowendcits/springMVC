@@ -45,5 +45,15 @@
 </form>
 <a href="world/testservletapi">test servletapi</a>
 <a href="world/testmodelandview">test modelandview</a>
+<a href="world/testmap">test map</a>
+<a href="world/testsession">test session</a><br>
+<form action="world/testmoduleattribute" method="post">
+  <input type="hidden" name="id" value="1">
+  username: <input type="text" name="name" value="zhangsan">
+  age: <input type="text" name="age" value="23">
+
+  <input type="submit" value="testmoduleattribute">
+</form>
+
 </body>
 </html>

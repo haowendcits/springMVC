@@ -9,8 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Writer;
+import java.util.Arrays;
 import java.util.Date;
-
+import java.util.Map;
+@SessionAttributes(value={"user"},types = {String.class})
 @RequestMapping("/world")
 @Controller
 public class HelloWorld {
@@ -101,6 +103,37 @@ public class HelloWorld {
        ModelAndView mv = new ModelAndView(viewName);
         mv.addObject("time",new Date());
         return mv;
+
+    }
+
+    @RequestMapping(value = "/testmap")
+    public String testMap(Map<String,Object> map) {
+        System.out.print(map.getClass().getName());
+        map.put("names", Arrays.asList("Tom","Jack","Lucy"));
+        return "success";
+
+    }
+
+    @RequestMapping(value = "/testsession")
+    public String testSessionAttribute(Map<String,Object> map) {
+        User u = new User("zhangsan","aaa",20);
+        map.put("user", u);
+        map.put("school","ssss");
+        return "success";
+
+    }
+    @ModelAttribute
+    public void getUser(@RequestParam("id") String id,Map<String,Object> map) {
+         if(id != null) {
+             User user = new User("1","zhangsan","12334",23);
+             map.put("user",user);
+         }
+    }
+
+    @RequestMapping(value = "/testmoduleattribute")
+    public String testModuleAttribute(@ModelAttribute("user") User user) {
+        System.out.print(user.getPassword()+","+user.getAge()+","+user.getName());
+        return "success";
 
     }
 }
