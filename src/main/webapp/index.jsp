@@ -9,6 +9,8 @@
 <html>
 <head>
     <title></title>
+  <script  src="<%=request.getContextPath()%>/js/jquery-2.1.1.min.js"></script>
+
 </head>
 <body>
 <form action="world/good" method="post">
@@ -41,6 +43,8 @@
   age: <input type="text" name="age">
   province: <input type="text" name="address.province">
   city: <input type="text" name="address.city">
+  birth:<input type="text" name="birth">
+  salary:<input type="text" name="salary">
    <input type="submit" value="testpojo">
 </form>
 <a href="world/testservletapi">test servletapi</a>
@@ -54,6 +58,17 @@
 
   <input type="submit" value="testmoduleattribute">
 </form>
+  <br>
+<a href="world/testhelloview">test hello view</a>
+<a href="world/testredirect">test redirect</a>
+<form action="world/testconversionservice" method="post">
+
+  user: <input type="text" name="user" >
+
+
+  <input type="submit" value="testconversionservice">
+</form>
 
 </body>
+
 </html>
