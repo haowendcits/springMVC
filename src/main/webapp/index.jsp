@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -10,7 +11,25 @@
 <head>
     <title></title>
   <script  src="<%=request.getContextPath()%>/js/jquery-2.1.1.min.js"></script>
+<script>
+  $(function(){
+    $("#testjson").click(function(){
+      var url = $(this).url;
+      var args = {};
+      $.post(url,args,function(data){
+        for(var i=0;i< data.length;i++) {
+          alert(data[i].name);
+        }
+return false;
+      });
 
+    }
+    );
+
+
+  });
+
+</script>
 </head>
 <body>
 <form action="world/good" method="post">
@@ -38,6 +57,7 @@
 
 
 <form action="world/testpojo" method="post">
+
   username: <input type="text" name="name">
   password: <input type="text" name="password">
   age: <input type="text" name="age">
@@ -68,7 +88,18 @@
 
   <input type="submit" value="testconversionservice">
 </form>
+<br>
+<a href="world/testjson" id="testjson">test json</a>
+<br>
+<form action="world/testHttpMessageConvertor" method="post" enctype="multipart/form-data">
+  file:<input type="file" name="file">
+  Desc:<input type="text" name="desc">
 
+
+  <input type="submit" value="testHttpMessageConvertor">
+</form><br>
+<a href="world/testResponseEntity" >testResponseEntity</a>
+<a href="world/i18n" >i18n</a>
 </body>
 
 </html>

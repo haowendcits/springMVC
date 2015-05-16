@@ -18,10 +18,14 @@
     </bean>
  <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
 
-     <property name="basename" value="i18n"/>
+     <property name="basenames" >
+<list><value>i18n</value></list>
+     </property>
  </bean>
 
     <mvc:view-controller path="/success" view-name="success" />
+
+    <mvc:view-controller path="/i18n2" view-name="i18n2" />
     <mvc:default-servlet-handler></mvc:default-servlet-handler>
     <mvc:annotation-driven conversion-service="conversionService"></mvc:annotation-driven>
     <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">

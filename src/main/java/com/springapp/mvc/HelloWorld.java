@@ -1,23 +1,34 @@
 package com.springapp.mvc;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.ResourceBundleMessageSource;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.Writer;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.Map;
+import java.util.*;
+
 @SessionAttributes(value={"user"},types = {String.class})
 @RequestMapping("/world")
 @Controller
 public class HelloWorld {
+
+    @Autowired
+    private ResourceBundleMessageSource messageSource;
 
     @RequestMapping("/good")
     public String hello() {
@@ -83,10 +94,12 @@ public class HelloWorld {
 
 
     @RequestMapping(value = "/testpojo")
-    public String testPojo(User user,BindingResult result) {
+    public String testPojo(@Valid User user,BindingResult result) {
         if(result.getErrorCount() > 0) {
             for(FieldError err :result.getFieldErrors())
                 System.out.println(err.getField()+":"+err.getDefaultMessage());
+
+            return "forward:/index.jsp";
         }
         System.out.println(user.getName() + user.getBirth()+","+user.getSalary());
         return "success";
@@ -165,5 +178,49 @@ public class HelloWorld {
         System.out.println(user.getName() + user.getAddress().getCity());
 
         return "redirect:/world/good";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/testjson")
+    public List<User> testJson(){
+        List<User> list = new ArrayList<User>();
+        User u = new User("1","zhangsan","21",12);
+        User u2 = new User("2","lisi","12",32);
+        list.add(u);
+        list.add(u2);
+        return list;
+    }
+
+    @ResponseBody
+     @RequestMapping(value = "/testHttpMessageConvertor")
+    public String testHttpMessageConvertor(@RequestBody String body){
+        System.out.println(body);
+
+        return "hello world !" + new Date();
+    }
+
+
+    @RequestMapping(value = "/testResponseEntity")
+    public ResponseEntity<byte[]> testResponseEntity(HttpSession session) throws IOException {
+        byte[] body = null;
+        ServletContext ctx = session.getServletContext();
+        InputStream in = ctx.getResourceAsStream("/files/123.txt");
+        body = new byte[in.available()];
+        in.read(body);
+
+        HttpHeaders header = new HttpHeaders();
+        header.add("Content-Disposition","attachment;filename=123.txt");
+        HttpStatus status = HttpStatus.OK;
+       ResponseEntity<byte[]> resp = new ResponseEntity<byte[]>(body,header,status);
+
+        return resp;
+    }
+
+
+    @RequestMapping(value = "/i18n")
+    public String testi18n(Locale locale) {
+      String val = messageSource.getMessage("i18n.username",null,locale);
+        System.out.println(val);
+        return "i18n";
     }
 }
