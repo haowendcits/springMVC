@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2023-12-06T08:36:38.606Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="03_SNSDrHABsqs1dFcSX" version="22.1.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-07T04:06:06.011Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="ZmluOkPrcRGMCcxVBtsn" version="22.1.5" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="2261" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2261" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-88" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="170" y="3588" width="830" height="630" as="geometry" />
+        </mxCell>
         <mxCell id="RshDDr85hCoLOWdUJhHJ-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="-45.5" y="149" as="sourcePoint" />
@@ -631,6 +634,62 @@
         </mxCell>
         <mxCell id="y2C6O2PB6CUnexKXsUtd-60" value="&lt;div&gt;&amp;nbsp; if (token != null &amp;amp;&amp;amp; token.tryAcquire()) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; result.put(id, token.get());&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; tokens.remove(id);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; progress.complete += 1;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; neededAbilities.remove(id);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
           <mxGeometry x="-190" y="2750" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-61" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="220" y="3804" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-64" value="camera1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="90" y="3888" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-70" value="inferThread" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="3661" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-71" value="encodeThread" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="630" y="3906" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-72" value="videostream Thread" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="220" y="3804" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-73" value="decoder" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="230" y="3854" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.008;entryY=0.554;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="y2C6O2PB6CUnexKXsUtd-75" target="y2C6O2PB6CUnexKXsUtd-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="3978" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-75" value="encodequeue" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="3938" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-76" value="inferqueue" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;rotation=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="450" y="3695" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-77" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;exitX=1.014;exitY=0.315;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="y2C6O2PB6CUnexKXsUtd-61" target="y2C6O2PB6CUnexKXsUtd-76">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="370" y="3838" as="sourcePoint" />
+            <mxPoint x="420" y="3788" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.008;entryY=0.562;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="y2C6O2PB6CUnexKXsUtd-76" target="y2C6O2PB6CUnexKXsUtd-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-82" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.007;exitY=0.692;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=52.5;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="y2C6O2PB6CUnexKXsUtd-61" target="y2C6O2PB6CUnexKXsUtd-75">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="3918" as="sourcePoint" />
+            <mxPoint x="510" y="3868" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-84" value="LinkedBlockingQueue&amp;lt;&amp;gt;(16)&lt;br&gt;&lt;pre style=&quot;background-color: rgb(199, 237, 204); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 9.8pt;&quot;&gt;&lt;div style=&quot;color: rgb(8, 8, 8); text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal;&quot;&gt;if (!&lt;/span&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal; color: rgb(135, 16, 148);&quot;&gt;inferQueue&lt;/span&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal;&quot;&gt;.offer(&lt;/span&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal; color: rgb(0, 0, 0);&quot;&gt;pic&lt;/span&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal;&quot;&gt;)) {&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal;&quot;&gt;&lt;font color=&quot;#871094&quot;&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 0); font-size: 9.8pt; white-space: normal;&quot;&gt;image&lt;/span&gt;&lt;span style=&quot;color: rgb(8, 8, 8); font-size: 9.8pt; white-space: normal;&quot;&gt;.release();&lt;/span&gt;&lt;font color=&quot;#080808&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;color: rgb(8, 8, 8); text-align: left;&quot;&gt;&lt;span style=&quot;font-size: 9.8pt; white-space: normal;&quot;&gt;}&lt;/span&gt;&lt;/div&gt;&lt;/pre&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="375" y="3588" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-85" value="DelayQueue&amp;lt;&amp;gt;()" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="435" y="3906" width="110" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-86" value="&lt;pre style=&quot;background-color:#c7edcc;color:#080808;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:9.8pt;&quot;&gt;pic = encodeQueue.take();&lt;br&gt;&lt;span style=&quot;color:#0033b3;&quot;&gt;while &lt;/span&gt;(&lt;span style=&quot;color:#871094;&quot;&gt;encodeQueue&lt;/span&gt;.size() &amp;gt; &lt;span style=&quot;color:#871094;&quot;&gt;fps &lt;/span&gt;* &lt;span style=&quot;color:#871094;&quot;&gt;streamDelay &lt;/span&gt;/ &lt;span style=&quot;color:#1750eb;&quot;&gt;1000 &lt;/span&gt;+ &lt;span style=&quot;color:#1750eb;&quot;&gt;3&lt;/span&gt;) {&lt;br&gt;    &lt;span style=&quot;color:#8c8c8c;font-style:italic;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color:#8c8c8c;font-style:italic;font-family:&#39;Courier New&#39;,monospace;&quot;&gt;抛弃来不及处理的帧&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#8c8c8c;font-style:italic;font-family:&#39;Courier New&#39;,monospace;&quot;&gt;    &lt;/span&gt;&lt;span style=&quot;color:#000000;&quot;&gt;Picture nextPic &lt;/span&gt;= &lt;span style=&quot;color:#871094;&quot;&gt;encodeQueue&lt;/span&gt;.poll();&lt;br&gt;    &lt;span style=&quot;color:#0033b3;&quot;&gt;if &lt;/span&gt;(&lt;span style=&quot;color:#000000;&quot;&gt;nextPic &lt;/span&gt;== &lt;span style=&quot;color:#0033b3;&quot;&gt;null&lt;/span&gt;) {&lt;br&gt;        &lt;span style=&quot;color:#0033b3;&quot;&gt;break&lt;/span&gt;;&lt;br&gt;    }&lt;br&gt;    release(pic);&lt;br&gt;    pic = &lt;span style=&quot;color:#000000;&quot;&gt;nextPic&lt;/span&gt;;&lt;br&gt;}&lt;/pre&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="340" y="4036" width="250" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="y2C6O2PB6CUnexKXsUtd-87" value="&lt;div&gt;public class Picture implements Delayed {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;public long getDelay(TimeUnit unit) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; return unit.convert(expireTime - System.currentTimeMillis(), TimeUnit.MILLISECONDS);&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="484" y="3818" width="523" height="70" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
